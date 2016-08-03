@@ -4,6 +4,7 @@ anaconda:
     - "8888:8888"
   links:
     - es-server
+  command: /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888"
   restart: always
 
 es-server:
