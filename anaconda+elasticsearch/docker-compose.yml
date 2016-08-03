@@ -1,0 +1,15 @@
+anaconda:
+  image: lucasko/anaconda
+  ports:
+    - "8888:8888"
+  links:
+    - es-server
+  restart: always
+
+es-server:
+  image: lucasko/elasticsearch
+  user: elsearch
+  ports:
+    - "29200:9200" 
+    - "29300:9300" 
+  restart: always
